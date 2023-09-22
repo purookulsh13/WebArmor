@@ -1,0 +1,29 @@
+{
+    "name": "Web Armour",
+    "description": "Enhance your online security with Web Armour extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "icons": {
+        "128": "webam.png"
+    },
+    "browser_action": {
+        "default_icon": "webam.png",
+        "default_popup": "wb.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["wb.js"],
+            "css": ["wb.css"],
+            "all_frames": false
+        }
+    ],
+    "permissions": [
+        "activeTab"
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["wb.js"]
+        }
+    ]
+}
